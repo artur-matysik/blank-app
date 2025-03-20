@@ -6,7 +6,7 @@ import cohere
 import streamlit as st
 
 # Set up Cohere client
-co = cohere.ClientV2("COHERE_KEY") # Get your free API key: https://dashboard.cohere.com/api-keys
+co = cohere.ClientV2(COHERE_KEY) # Get your free API key: https://dashboard.cohere.com/api-keys
 
 def generate_idea(industry, temperature):
 
