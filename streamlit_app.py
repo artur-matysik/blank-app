@@ -5,7 +5,7 @@ import textwrap
 import cohere
 import streamlit as st
 
-cohere_key = os.getenv("API_KEY", st.secrets["cohere"]["COHERE_KEY"])
+cohere_key = st.secrets["cohere"]["COHERE_KEY"]
 
 # Set up Cohere client
 co = cohere.ClientV2(cohere_key) # Get your free API key: https://dashboard.cohere.com/api-keys
