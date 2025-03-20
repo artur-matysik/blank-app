@@ -5,8 +5,10 @@ import textwrap
 import cohere
 import streamlit as st
 
+cohere_key = st.secrets["COHERE_KEY"]
+
 # Set up Cohere client
-co = cohere.ClientV2(COHERE_KEY) # Get your free API key: https://dashboard.cohere.com/api-keys
+co = cohere.ClientV2(cohere_key) # Get your free API key: https://dashboard.cohere.com/api-keys
 
 def generate_idea(industry, temperature):
 
