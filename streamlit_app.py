@@ -5,7 +5,11 @@ import textwrap
 import cohere
 import streamlit as st
 
-cohere_key = st.secrets["cohere"]["COHERE_KEY"]
+try:
+    cohere_key = st.secrets["cohere"]["COHERE_KEY"]
+    st.success("Cohere API Key Loaded Successfully!")  # Debugging message
+except Exception as e:
+    st.error(f"Error loading secrets: {e}")
 
 # Set up Cohere client
 co = cohere.ClientV2(cohere_key) # Get your free API key: https://dashboard.cohere.com/api-keys
